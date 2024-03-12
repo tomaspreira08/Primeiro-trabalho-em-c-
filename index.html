@@ -1,14 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <h1>trabalho usando c++ </h1>
-    <h2>trabalho feito por jean e tomas </h2>
-    <a href="https://lucid.app/lucidspark/5d0b3f99-89b7-44ff-a462-2e192c2db1e2/edit?viewport_loc=-3920%2C-106%2C1834%2C1934%2C0_0&invitationId=inv_1783b0dc-5021-4114-a85a-69d73a9ef09b" target="_blank">Link para o Lucid</a>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        h2 {
+            color: #ccc;
+        }
+
+        p {
+            color: #aaa;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Primeiro trabalho em C++</h1>
+        <h2>Explicação do código utilizado para realizar o trabalho</h2>
+
+        <p>#include iostream</p>
+        <p>#include map</p>
+        <p>#include string</p>
+
+        <p>Usando o namespace std;</p>
+
+        <p>Nesta parte do código, estamos incluindo as bibliotecas iostream, map e string. A biblioteca iostream é usada
+            para entrada e saída padrão. A biblioteca map é uma estrutura de dados que associa chaves a valores e é usada
+            para manipular strings. A declaração 'using namespace std;' nos permite usar elementos do namespace std sem
+            precisar prefixá-los com std::</p>
+
+        <br>
+
+        <h1>struct Material</h1>
+        <p>Estamos definindo uma estrutura chamada Material, que possui quatro membros: nome (uma string que armazena o
+            nome
+            do material), estoque (um inteiro que armazena a quantidade em estoque), preco (um número de ponto
+            flutuante que
+            armazena o preço do material) e vendidos (um inteiro que armazena a quantidade vendida do material).</p>
+
+        <br>
+
+        <h1>int main()</h1>
+        <p>A função main() é o ponto de entrada do programa. Aqui, estamos declarando uma variável materiais como um
+            mapa
+            onde as chaves são inteiros e os valores são do tipo Material. Também estamos inicializando uma variável
+            lucroTotal como um número de ponto flutuante que armazenará o lucro total obtido com as vendas.</p>
+
+        <br>
+
+        <h1>Inicializando os materiais</h1>
+        <p>Aqui, estamos inicializando os materiais dentro do mapa materiais, atribuindo valores iniciais para cada
+            material.</p>
+
+        <br>
+
+        <h1>Menu de Opções</h1>
+        <p>Nesta parte do código, estamos usando um loop while (true) para permitir que o usuário faça repetidas escolhas
+            de
+            opções até que ele escolha sair do programa. Dentro do loop, estamos exibindo um menu com cinco opções usando
+            cout, e pedindo ao usuário que escolha uma opção digitando um número, que é armazenado na variável opcao.</p>
+
+        <br>
+
+        <h1>Opção 1: Vender produto</h1>
+        <p>Se o usuário escolher a opção 1, o programa permite vender um produto. Ele exibe os materiais disponíveis com
+            seus códigos, estoques, preços e quantidade vendida. O usuário então digita o código do material que deseja
+            vender e a quantidade. Se o código for válido e houver estoque suficiente, a quantidade vendida é subtraída
+            do
+            estoque, o lucro total é atualizado e uma mensagem de venda bem-sucedida é exibida. Caso contrário, uma
+            mensagem
+            de erro é mostrada.</p>
+
+        <br>
+
+        <h1>Opção 2: Mostrar estoque</h1>
+        <p>Se o usuário escolher a opção 2, o programa exibirá o estoque atual de cada material, mostrando o nome,
+            quantidade em estoque e preço.</p>
+
+        <br>
+        <h1>Opção 3: Mostrar lucro total</h1>
+        <p>Se o usuário escolher a opção 3, o programa exibirá o lucro total obtido com todas as vendas realizadas até o
+            momento.</p>
+
+        <br>
+        <h1>Opção 4: Comprar produto para repor estoque</h1>
+        <p>Se o usuário escolher a opção 4, o programa permitirá comprar produtos para repor o estoque. Ele solicitará o
+            código do material e a quantidade a ser comprada. Após a compra, o estoque será atualizado e uma mensagem de
+            confirmação será exibida.</p>
+        <br>
+        <h1>Opção 5: Sair do programa</h1>
+        <p>Se o usuário escolher a opção 5, o programa exibirá uma mensagem de saída e sairá do loop usando a instrução
+            'break'.</p>
+
+        <br>
+        <a
+            href="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Diagrama%20sem%20nome.drawio#R7V1bk5s6Ev41rso%2B2MUd%2FJiZSbJnT7I1e%2BZsstmXLRlkmxOMHBBzya9fCQQGSRh84WLPTKoytgxi1F%2F3p1a3Wp7ot5vnTxHYrr8A">Link
+            para Diagrama</a>
+    </div>
 </body>
+
 </html>
