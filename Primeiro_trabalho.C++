@@ -16,7 +16,7 @@ int main() {
     float lucroTotal = 0.0;
 
     // Inicializando os materiais
-    materiais[1] = {"Caderno", 10, 5.0, 0};
+    materiais[1] = {"Caderno", 90, 5.0, 0};
     materiais[2] = {"Caneta", 20, 1.5, 0};
     materiais[3] = {"Afia", 15, 0.75, 0};
     materiais[4] = {"Borracha", 3, 0.5, 0};  // Exemplo de estoque baixo
@@ -25,7 +25,7 @@ int main() {
     int opcao;
     while (true) {
         cout << "Escolha uma opção:" << endl;
-        cout << "1. Vender produtxo" << endl;
+        cout << "1. Produto Vendido" << endl;
         cout << "2. Mostrar stock" << endl;
         cout << "3. Mostrar lucro total" << endl;
         cout << "4. Comprar produto para repor stock" << endl;
@@ -49,7 +49,7 @@ int main() {
                 cout << endl;
 
                 if (quantidade > 0 && quantidade <= materiais[codigo].estoque) {
-                    if (materiais[codigo].estoque - quantidade < 5) { // Verifica se o estoque ficará abaixo de 5 após a venda
+                    if (materiais[codigo].estoque - quantidade <= 5) { // Verifica se o estoque ficará abaixo de 5 após a venda
                         cout << "Atenção: Este produto está com stock baixo!" << endl;
                     }
 
@@ -57,7 +57,22 @@ int main() {
                     materiais[codigo].vendidos += quantidade;
                     float total = quantidade * materiais[codigo].preco;
                     lucroTotal += total;
-                    cout << "Venda realizada. Total: € " << total << endl << endl;
+
+                    cout << "Venda realizada. Total: € " << total << endl;
+
+                    // Cálculo do troco
+                    float valorPago;
+                    cout << "Digite o valor pago pelo cliente: € ";
+                    cin >> valorPago;
+                    cout << endl;
+
+                    if (valorPago >= total) {
+                        float troco = valorPago - total;
+                        cout << "Troco a ser dado ao cliente: € " << troco << endl;
+                    } else {
+                        cout << "Valor insuficiente, nenhum troco será dado." << endl;
+                    }
+                    cout << endl;
                 } else {
                     cout << "Quantidade inválida ou insuficiente em stock." << endl << endl;
                 }
